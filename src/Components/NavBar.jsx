@@ -7,7 +7,7 @@ const NavBar = () => {
     <div  >
       <div className='flex justify-between items-center bg-primary p-4  shadow-md '>
         <div className='flex items-center gap-3'>
-          <h1 className='text-4xl font-black text-white'>BabyCode Academy</h1>
+          <h1 className='sm:text-4xl  font-black text-white'>BabyCode Academy</h1>
         </div>
         <div>
 
@@ -28,7 +28,7 @@ const NavBar = () => {
                   Logout
                 </div>
               </div>
-            </div> : <button className='btn btn-md rounded-lg capitalize bg-white text-black' onClick={() => setShowLoginForm(prev => !prev)} >LogIn</button>}
+            </div> : <button className='btn sm:btn-md sm:rounded-lg btn-xs capitalize bg-white text-black' onClick={() => setShowLoginForm(prev => !prev)} >LogIn</button>}
         </div>
       </div>
     </div>
