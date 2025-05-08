@@ -41,9 +41,10 @@ export const AuthContextProvider = ({ children }) => {
             }
             setCurrentUser(userCredential.user);
             setUserLoggedIn(true);
+            setShowLoginForm(false);
             setEmail("");
             setPassword("");
-            console.log("User logged in", userCredential.user);
+            // console.log("User logged in", userCredential.user);
 
         } catch (err) {
             console.error(err);
@@ -57,6 +58,7 @@ export const AuthContextProvider = ({ children }) => {
 
             const data = await doSignInWithGoogle();
             setUserLoggedIn(true);
+            setShowLoginForm(false);
             setCurrentUser(data.user);
 
         } catch (err) {

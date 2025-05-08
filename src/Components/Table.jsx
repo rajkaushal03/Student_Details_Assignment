@@ -3,8 +3,8 @@ import { useStudentContext } from '../Context/StudentContext';
 import { useAuthContext } from '../Context/AuthContext';
 
 const Table = () => {
-    const { students, loading, setShowDetails, setStudentDetails, userLoggedIn } = useStudentContext();
-    const { setShowLoginForm } = useAuthContext()    
+    const { students, loading, setShowDetails, setStudentDetails } = useStudentContext();
+    const { setShowLoginForm, userLoggedIn } = useAuthContext()    
 
     return (
         <div className='p-3 bg-white w-fit'>
@@ -34,6 +34,7 @@ const Table = () => {
                                 <td className="border border-gray-500  ">
                                     <button className='btn lg:btn-md btn-xs  text-white capitalize bg-blue-500'
                                         onClick={() => {
+                                            // console.log(userLoggedIn);
                                             if (userLoggedIn) {
                                                 setShowDetails(prev => !prev);
                                                 setStudentDetails(student)
